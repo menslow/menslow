@@ -31,4 +31,4 @@ set :deploy_via, :remote_cache
 set :user, "root"
 
 # Stage specific tasks
-after "deploy:update_code", "shared:update_htaccess"
+after "deploy:update_code"

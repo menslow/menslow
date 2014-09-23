@@ -46,5 +46,5 @@ set :deploy_via, :remote_cache
 set :user, "root"
 
 # Specify when to run tasks
-after "deploy:update_code", "shared:make_symlinks", "shared:update_htaccess"
+after "deploy:update_code", "shared:make_symlinks"
 after "deploy", "deploy:cleanup"
