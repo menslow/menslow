@@ -1,18 +1,18 @@
 # Application name - used on shop for deployment directory
-set :application, "esd"
+set :application, "menslow"
 
 # Options
 set :use_sudo, false
 set :keep_releases, 5
 
 # Exclude the following files
-set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules", "env_local", "env_prod", "env_stage"]
+set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules", ".env"]
 
 # Source Control - defaults to git
 set :scm, :git
 # Repository
 set :repo_user, "menslow"
-set :repo_name, "esd"
+set :repo_name, "menslow"
 set :repository, "git@github.com:#{repo_user}/#{repo_name}.git"  # Your clone URL
 # Default repository branch to checkout
 set :branch, "master"
@@ -27,7 +27,7 @@ ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_mistermachineshop_rsa")
 set :time_stamp, Time.now.to_i
 
 # Set theme path for uploaded minified assets
-set :theme_path, "../application/wp-content/themes/esd"
+set :theme_path, "../application/wp-content/themes/menslow"
 
 # Config for test server on mistermachineshop.com
 # Extracted from deploy/dev.rb until we need to deploy to multiple servers

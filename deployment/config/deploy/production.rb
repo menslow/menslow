@@ -36,4 +36,4 @@ set :user, ""
 set :port, 2222
 
 # Stage specific tasks
-after "deploy:update_code", "shared:public_html", "deploy_assets"
+after "deploy:update_code", "shared:public_html"
